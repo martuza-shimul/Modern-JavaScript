@@ -62,7 +62,19 @@ let user = {
     age: '24',
     email: 'mart.shimul@gmail.com',
     location: '53/4, Mehedibag, Dhaka-1207',
-    blogs: ['How to be a webDeveloper in 3 months', 'Front-end developer in 6 months', 'Learn React in 45 hours training'],
+    blogs: ['How to be a webDeveloper in 3 months', 'Front-end developer in 6 months', 'Learn React in 45 hours training'], 
+
+    // nested objects. objects in an array
+    newBlogs: [
+        {
+            title: 'How to be a software Developer in 3 months',
+            likes: 40
+        },
+        {
+            title: 'Back-end developer in 6 months',
+            likes: 50
+        }
+    ], 
     /*login: function(){
         console.log('User logged in');
     },
@@ -91,6 +103,10 @@ let user = {
         console.log('This user has written the following blogs:');
         this.blogs.forEach(blog => {
             console.log(blog);
+        });
+        console.log('This user has written the following new blogs:');
+        this.newBlogs.forEach(newBlog => {
+            console.log(`Title: ${newBlog.title},  ${newBlog.likes} likes`);
         })
     }
 };
