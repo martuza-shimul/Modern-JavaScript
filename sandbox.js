@@ -54,3 +54,20 @@ people.forEach(person => {
 console.log(htmlNew);
 
 ul.innerHTML = htmlNew;
+
+// Object literals
+
+let user = {
+    name: 'Shimul',
+    age: '24',
+    email: 'mart.shimul@gmail.com',
+    location: '53/4, Mehedibag, Dhaka-1207'
+};
+
+console.log(user.name);
+console.log(user['name']);
+
+user['name'] = 'Martuza';
+
+console.log(user['name']);
+console.log(typeof user);
