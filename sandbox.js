@@ -61,7 +61,38 @@ let user = {
     name: 'Shimul',
     age: '24',
     email: 'mart.shimul@gmail.com',
-    location: '53/4, Mehedibag, Dhaka-1207'
+    location: '53/4, Mehedibag, Dhaka-1207',
+    blogs: ['How to be a webDeveloper in 3 months', 'Front-end developer in 6 months', 'Learn React in 45 hours training'],
+    /*login: function(){
+        console.log('User logged in');
+    },
+    logout: function(){
+        console.log('User logged out');
+    },
+    logBlogs: function(){
+        // console.log(this.blogs);
+        console.log('This user has written the following blogs:');
+        this.blogs.forEach(blog => {
+            console.log(blog);
+        })
+    }
+    */
+
+    /*       Shorthand version of above regular function
+    *************************************************************** */
+    login(){
+        console.log('User logged in');
+    },
+    logout(){
+        console.log('User logged out');
+    },
+    logBlogs(){
+        // console.log(this.blogs);
+        console.log('This user has written the following blogs:');
+        this.blogs.forEach(blog => {
+            console.log(blog);
+        })
+    }
 };
 
 console.log(user.name);
@@ -71,3 +102,7 @@ user['name'] = 'Martuza';
 
 console.log(user['name']);
 console.log(typeof user);
+
+user.login();
+user.logout();
+user.logBlogs();
