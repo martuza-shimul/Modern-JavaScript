@@ -122,3 +122,18 @@ console.log(typeof user);
 user.login();
 user.logout();
 user.logBlogs();
+
+
+
+/*                        async / await / fetch
+**************************************************************************/
+const fetchData = async function fetchUser() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    const data = await res.json();
+
+    
+}
+
+// fetchUser();
+console.log(fetchData);
