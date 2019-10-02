@@ -127,13 +127,69 @@ user.logBlogs();
 
 /*                        async / await / fetch
 **************************************************************************/
-const fetchData = async function fetchUser() {
+async function fetchUser() {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
 
     const data = await res.json();
 
-    
-}
+    console.log(data);
 
-// fetchUser();
-console.log(fetchData);
+    data.forEach(newData => console.log(newData.name));
+
+    
+};
+
+fetchUser();
+// console.log(fetchData);
+
+
+/* JavaScript Higher Functions 
+==========================================*/
+
+const companies= [
+    {name: "Company One", category: "Finance", start: 1981, end: 2004},
+    {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+    {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+    {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+    {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+    {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+    {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+    {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+    {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+  ];
+
+const ages = [12, 33, 43, 34, 21, 11, 18, 20, 49, 55, 67, 32, 25, 10, 53, 61];
+
+// filter function uses
+
+// const canDrink = ages.filter( age => {
+//     if(age >= 21){
+//         return true;
+//     }
+// });
+
+
+const canDrink = ages.filter( age => age >= 21); // shorthand of above code
+
+console.log(canDrink);
+
+
+// Filter the retail company
+
+const retailCompany = companies.filter(company => company.category === 'Retail');
+
+console.log(retailCompany);
+
+retailCompany.forEach(newData => console.log(newData.name));
+
+// Filter the 80's company
+
+const firstCompanies = companies.filter(company => company.start >=1980 && company.start < 1990);
+console.log(firstCompanies);
+firstCompanies.forEach(newData => console.log(`${newData.name} starts from ${newData.start}`));
+
+// Get companies that lasted 10 years or more
+
+const lastedTenYears = companies.filter(company => company.end - company.start >= 10);
+console.log(lastedTenYears);
+lastedTenYears.forEach(newData => console.log(`${newData.name} lasted 10 years or more`));
