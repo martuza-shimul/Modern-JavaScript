@@ -223,3 +223,23 @@ console.log(agesTimesTwo);
 
 const sortedCompanies = companies.sort((a, b) => (a.start - b.start));//another condition
 console.log(sortedCompanies);
+
+
+/*reduce function
+================================================================================================================== */
+
+// using for loop
+// let ageSum = 0;
+// for(let i = 0; i < ages.length; i++){
+//     ageSum += ages[i];
+// }
+
+// using reduce
+// const ageSum = ages.reduce(function(total, age){
+//     return total + age;
+// }, 0);
+
+// shorthand
+const ageSum = ages.reduce((total, age) => total + age, 0);
+
+console.log(ageSum);
