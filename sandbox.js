@@ -193,3 +193,15 @@ firstCompanies.forEach(newData => console.log(`${newData.name} starts from ${new
 const lastedTenYears = companies.filter(company => company.end - company.start >= 10);
 console.log(lastedTenYears);
 lastedTenYears.forEach(newData => console.log(`${newData.name} lasted 10 years or more`));
+
+
+/*map function
+=========================== */
+
+// Create array of company names
+
+const companyNames = companies.map(company => company.name);
+console.log(companyNames);
+
+const agesTimesTwo = ages.map(age => age * 2);
+console.log(agesTimesTwo);
