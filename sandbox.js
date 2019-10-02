@@ -205,3 +205,21 @@ console.log(companyNames);
 
 const agesTimesTwo = ages.map(age => age * 2);
 console.log(agesTimesTwo);
+
+
+/*sort Function
+================================ */
+
+// const sortedCompanies = companies.sort(function(c1, c2){
+//     if(c1.start > c2.start){
+//         return 1;
+//     }else {
+//         return -1;
+//     }
+// });
+
+// Shorthand of above code
+// const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+
+const sortedCompanies = companies.sort((a, b) => (a.start - b.start));//another condition
+console.log(sortedCompanies);
